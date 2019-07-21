@@ -109,7 +109,7 @@ class DCGAN(object):
     def train(self, epochs, batch_size=128, save_interval=50):
 
         # Load the dataset  X_train.shape = (60000, 28, 28)
-        (X_train, _), (_, _) = mnist.load_data_DCGAN()  # 这里由于下载数据集不成功，所以自己修改了load_data()
+        (X_train, _), (_, _) = mnist.load_data_DCGAN()  # 这里由于下载数据集不成功，所以自己修改了源码中的load_data()
 
         # Rescale -1 to 1  归一化处理
         X_train = X_train / 127.5 - 1.
